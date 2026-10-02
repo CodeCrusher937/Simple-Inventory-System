@@ -1,0 +1,116 @@
+.form-box {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fffdf8;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fffdf8;
+}
+
+.form-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form-box textarea {
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background: #dc3545;
+    color: #fffdf8;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #720c17;
+}
+
+.delete-btn {
+    width: 100%;
+    padding: 10px;
+    background: #dc3545;
+    color: #fffdf8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #720c17;
+}
+
+.sidebar {
+    width: 230px;
+    background: #064e3b;;
+    color: white;
+    padding: 25px 15px;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #fffdf8;
+    padding: 13px 15px;
+    border-radius: 6px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #054105;
+    color: white;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+/* 
+.topbar{
+    font-size: 28px;
+    margin-bottom: 6px;
+    color: black;
+} */
+ 
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
