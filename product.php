@@ -76,7 +76,6 @@ $products = mysqli_query($connection, "SELECT id, product_name, buying_price, se
                         <th>Buying Price</th>
                         <th>Selling Price</th>
                         <th>Quantity</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
 
@@ -110,15 +109,6 @@ $products = mysqli_query($connection, "SELECT id, product_name, buying_price, se
 
                             <td>
                                 <?php echo $product["quantity"];?>
-                            </td>
-
-
-                            <td>
-                                <a href="editDel.php?id=<?php echo $product["id"]; ?>" class="edit-btn" >Edit</a>
-                                <a href="product.php?delete=<?php echo $product["id"]; ?>" class="delete-btn"
-                                    onclick="return confirm('Are you sure you want to delete this product?');" >
-                                    Delete
-                                </a>
                             </td>
                         </tr>
                     <?php endwhile; ?>

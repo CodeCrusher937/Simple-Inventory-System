@@ -4,7 +4,7 @@ include "connection.php";
 session_start();
 
 if (!isset($_SESSION["user_id"]) || $_SESSION["role"] !== "customer") {
-    header("Location: login.php");
+    header("location: login.php");
     exit;
 }
 
@@ -18,7 +18,7 @@ if (isset($_POST["make_sale"])) {
     if ($product_id <= 0 || $quantity <= 0) {
         $message = "Please select a product and enter a valid quantity.";
     } else {
-        $product_query = mysqli_query( $connection, "SELECT * FROM products WHERE id = $product_id");
+        $product_query = mysqli_query($connection, "SELECT * FROM products WHERE id = $product_id");
 
         if ($product_query && mysqli_num_rows($product_query) == 1) {
             $product = mysqli_fetch_assoc($product_query);
@@ -141,13 +141,6 @@ $sales = mysqli_query($connection, "SELECT sale_items.id, products.product_name,
             </div>
 
             <form action="sale.php" method="POST" id="salesForm">
-                <div class="product-preview">
-                    <img id="product_image" src="" alt="Product Image">
-
-                    <p id="image_text">
-                        Select a product
-                    </p>
-                </div>
 
                 <div class="form-row">
                     <div class="form-group">

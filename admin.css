@@ -18,7 +18,7 @@ body {
 .sidebar {
     width: 230px;
     background: #064e3b;
-    color: white;
+    color: #f8e7c9;
     padding: 25px 15px;
     position: fixed;
     height: 100vh;
@@ -27,7 +27,7 @@ body {
 .sidebar h2 {
     text-align: center;
     margin-bottom: 35px;
-    color: #064e3b;
+    color: #f8e7c9 ;
 }
 
 .sidebar nav {
@@ -38,7 +38,7 @@ body {
 
 .sidebar nav a {
     text-decoration: none;
-    color: #d1d5db;
+    color: #f8e7c9;
     padding: 13px 15px;
     border-radius: 6px;
 }
@@ -182,10 +182,6 @@ table td {
     .sidebar {
         width: 70px;
         padding: 20px 8px;
-    }
-
-    .sidebar h2 {
-        font-size: 0;
     }
 
     .sidebar h2::after {

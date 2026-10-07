@@ -17,12 +17,6 @@ if (isset($_POST["add_product"])) {
 
     $new_image_name = time() . "_" . $image_name;
 
-    // move_uploaded_file(
-    //     $image_tmp,
-    //     $image_folder . $new_image_name
-    // );
-
-
     $sql = "INSERT INTO products(product_name, product_image, buying_price, selling_price, quantity, description)
             VALUES('$product_name', '$new_image_name', '$buying_price', '$selling_price', '$quantity', '$description')";
 

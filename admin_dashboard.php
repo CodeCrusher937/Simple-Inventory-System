@@ -16,28 +16,28 @@ $total_customers = 0;
 $result = mysqli_query($connection, "SELECT COUNT(*) AS total FROM users");
 
 if ($result) {
-    $row = $result->fetch_assoc();
+    $row = mysqli_fetch_assoc($result);
     $total_users = $row["total"];
 }
 
 $result = mysqli_query($connection, "SELECT COUNT(*) AS total FROM products");
 
 if ($result) {
-    $row = $result->fetch_assoc();
+    $row = mysqli_fetch_assoc($result);
     $total_products = $row["total"];
 }
 
 $result = mysqli_query($connection, "SELECT COALESCE(SUM(revenue), 0) AS total FROM sale_items");
 
 if ($result) {
-    $row = $result->fetch_assoc();
+    $row = mysqli_fetch_assoc($result);
     $total_revenue = $row["total"];
 }
 
 $result = mysqli_query($connection, "SELECT COUNT(*) AS total FROM users WHERE role = 'customer'");
 
 if ($result) {
-    $row = $result->fetch_assoc();
+    $row = mysqli_fetch_assoc($result);
     $total_customers = $row["total"];
 }
 

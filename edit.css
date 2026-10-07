@@ -67,7 +67,7 @@
 .sidebar {
     width: 230px;
     background: #064e3b;;
-    color: white;
+    color: #f8e7c9;
     padding: 25px 15px;
     position: fixed;
     height: 100vh;
@@ -86,7 +86,7 @@
 
 .sidebar nav a {
     text-decoration: none;
-    color: #fffdf8;
+    color: #f8e7c9;
     padding: 13px 15px;
     border-radius: 6px;
 }
@@ -101,13 +101,6 @@
     display: flex;
     min-height: 100vh;
 }
-/* 
-.topbar{
-    font-size: 28px;
-    margin-bottom: 6px;
-    color: black;
-} */
- 
 .topbar {
     display: flex;
     justify-content: space-between;
