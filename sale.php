@@ -302,8 +302,6 @@ $sales = mysqli_query($connection, "SELECT sale_items.id, products.product_name,
 <script>
 
 const productSelect = document.getElementById("product_id");
-const productImage = document.getElementById("product_image");
-const imageText = document.getElementById("image_text");
 const buyingPrice = document.getElementById("buying_price");
 const sellingPrice = document.getElementById("selling_price");
 const availableStock = document.getElementById("available_stock");
@@ -311,13 +309,12 @@ const quantity = document.getElementById("quantity");
 const totalSales = document.getElementById("total_sales");
 const revenue = document.getElementById("revenue");
 
+
 productSelect.addEventListener("change", function () {
+
     const option = this.options[this.selectedIndex];
 
     if (!option.value) {
-
-        productImage.style.display = "none";
-        imageText.style.display = "block";
 
         buyingPrice.value = "";
         sellingPrice.value = "";
@@ -329,36 +326,27 @@ productSelect.addEventListener("change", function () {
         return;
     }
 
-    const image = option.dataset.image;
-
-    if (image) {
-
-        productImage.src = "uploads/" + image;
-        productImage.style.display = "block";
-        imageText.style.display = "none";
-
-    } else {
-
-        productImage.style.display = "none";
-        imageText.style.display = "block";
-    }
 
     buyingPrice.value =
         "TZS " +
         Number(option.dataset.buying).toLocaleString();
 
+
     sellingPrice.value =
         "TZS " +
         Number(option.dataset.selling).toLocaleString();
 
+
     availableStock.value =
         option.dataset.stock;
+
 
     quantity.value = "";
     totalSales.value = "";
     revenue.value = "";
 
 });
+
 
 quantity.addEventListener("input", function () {
 
@@ -368,6 +356,7 @@ quantity.addEventListener("input", function () {
     if (!option.value) {
         return;
     }
+
 
     const buying =
         Number(option.dataset.buying);
@@ -381,6 +370,7 @@ quantity.addEventListener("input", function () {
     const qty =
         Number(this.value);
 
+
     if (qty > stock) {
 
         this.setCustomValidity(
@@ -393,19 +383,23 @@ quantity.addEventListener("input", function () {
 
     }
 
+
     const total =
         selling * qty;
 
     const profit =
         (selling - buying) * qty;
 
+
     totalSales.value =
         "TZS " + total.toLocaleString();
+
 
     revenue.value =
         "TZS " + profit.toLocaleString();
 
 });
+
 </script>
 </body>
 </html>

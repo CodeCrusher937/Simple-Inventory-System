@@ -18,6 +18,7 @@ if(isset($_POST['register'])){
     }
 
     if(!$name && !$email && !$phone && !$password){
+        // echo "<script>alert('Please fill all fields.')</script>";
         echo "Please fill all fields.";
     }else{
 
